@@ -1,131 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.1 on darwin)" generated="2025-02-11T10:38:48.199196" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.1 on darwin)" generated="2025-02-11T10:40:57.298741" rpa="false" schemaversion="5">
 <suite id="s1" name="Lol2" source="/Users/nickykung123/Downloads/robotTestcase/lol2.robot">
 <test id="s1-t1" name="Remove Product From Cart" line="12">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-11T10:38:48.258045" level="INFO">Opening browser 'Chrome' to base url 'http://automationexercise.com'.</msg>
+<msg time="2025-02-11T10:40:57.367190" level="INFO">Opening browser 'Chrome' to base url 'http://automationexercise.com'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-11T10:38:48.257864" elapsed="3.496875"/>
+<status status="PASS" start="2025-02-11T10:40:57.366901" elapsed="3.125460"/>
 </kw>
 <kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2025-02-11T10:38:51.774657" level="INFO">${title} = Automation Exercise</msg>
+<msg time="2025-02-11T10:41:00.497519" level="INFO">${title} = Automation Exercise</msg>
 <var>${title}</var>
 <doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-02-11T10:38:51.755873" elapsed="0.018940"/>
+<status status="PASS" start="2025-02-11T10:41:00.493315" elapsed="0.004396"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${title}</arg>
 <arg>Automation Exercise</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-02-11T10:38:51.775077" elapsed="0.000200"/>
+<status status="PASS" start="2025-02-11T10:41:00.497911" elapsed="0.000220"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-02-11T10:38:51.775499" level="INFO">หน้าแรกโหลดสำเร็จ</msg>
+<msg time="2025-02-11T10:41:00.498522" level="INFO">หน้าแรกโหลดสำเร็จ</msg>
 <arg>หน้าแรกโหลดสำเร็จ</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-02-11T10:38:51.775396" elapsed="0.000169"/>
+<status status="PASS" start="2025-02-11T10:41:00.498334" elapsed="0.000289"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2025-02-11T10:38:51.776026" level="INFO">Executing JavaScript:
+<msg time="2025-02-11T10:41:00.499172" level="INFO">Executing JavaScript:
 var ads = document.querySelectorAll('iframe'); ads.forEach(ad =&gt; ad.remove());
 Without any arguments.</msg>
 <arg>var ads = document.querySelectorAll('iframe'); ads.forEach(ad =&gt; ad.remove());</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2025-02-11T10:38:51.775719" elapsed="0.004205"/>
+<status status="PASS" start="2025-02-11T10:41:00.498779" elapsed="0.007510"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-11T10:38:53.781200" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-02-11T10:41:02.507012" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-11T10:38:51.780064" elapsed="2.002047"/>
+<status status="PASS" start="2025-02-11T10:41:00.506526" elapsed="2.000868"/>
 </kw>
 <kw name="Get WebElement" owner="SeleniumLibrary">
-<msg time="2025-02-11T10:38:53.804275" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="da1950f182424ca083cda0f3a05b313e", element="f.D3EB3A07FC3E4B04A19C012C443D14EA.d.28A1A5373EF8BEB47E7A29EF01929B4B.e.30")&gt;</msg>
+<msg time="2025-02-11T10:41:02.524016" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="5168ef9e68fef1e917cfef7f5922cadb", element="f.8B3912F4CE87C023A3526D055C069BFA.d.A2C6E5CB1CE56C26B313ACAD1DA063E4.e.39")&gt;</msg>
 <var>${element}</var>
 <arg>${ADD_TO_CART_BTN}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<status status="PASS" start="2025-02-11T10:38:53.783008" elapsed="0.021456"/>
+<status status="PASS" start="2025-02-11T10:41:02.507913" elapsed="0.016325"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2025-02-11T10:38:53.805224" level="INFO">Executing JavaScript:
+<msg time="2025-02-11T10:41:02.524897" level="INFO">Executing JavaScript:
 arguments[0].dispatchEvent(new Event('click'));
 By using argument:
-'&lt;selenium.webdriver.remote.webelement.WebElement (session="da1950f182424ca083cda0f3a05b313e", element="f.D3EB3A07FC3E4B04A19C012C443D14EA.d.28A1A5373EF8BEB47E7A29EF01929B4B.e.30")&gt;'</msg>
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="5168ef9e68fef1e917cfef7f5922cadb", element="f.8B3912F4CE87C023A3526D055C069BFA.d.A2C6E5CB1CE56C26B313ACAD1DA063E4.e.39")&gt;'</msg>
 <arg>arguments[0].dispatchEvent(new Event('click'));</arg>
 <arg>ARGUMENTS</arg>
 <arg>${element}</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2025-02-11T10:38:53.804716" elapsed="0.008465"/>
+<status status="PASS" start="2025-02-11T10:41:02.524506" elapsed="0.004907"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-11T10:38:55.816161" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-02-11T10:41:04.532318" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-11T10:38:53.813525" elapsed="2.003487"/>
+<status status="PASS" start="2025-02-11T10:41:02.529722" elapsed="2.003533"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-11T10:38:55.819868" level="INFO">Clicking button '//button[text()='Continue Shopping']'.</msg>
+<msg time="2025-02-11T10:41:04.536208" level="INFO">Clicking button '//button[text()='Continue Shopping']'.</msg>
 <arg>//button[text()='Continue Shopping']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-11T10:38:55.819235" elapsed="0.059956"/>
+<status status="PASS" start="2025-02-11T10:41:04.535719" elapsed="0.062718"/>
 </kw>
 <arg>Click Button</arg>
 <arg>//button[text()='Continue Shopping']</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-02-11T10:38:55.818282" elapsed="0.061020"/>
+<status status="PASS" start="2025-02-11T10:41:04.534782" elapsed="0.063784"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-02-11T10:38:55.879669" level="INFO">เพิ่มสินค้าลงตะกร้าสำเร็จ</msg>
+<msg time="2025-02-11T10:41:04.598950" level="INFO">เพิ่มสินค้าลงตะกร้าสำเร็จ</msg>
 <arg>เพิ่มสินค้าลงตะกร้าสำเร็จ</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-02-11T10:38:55.879516" elapsed="0.000286"/>
+<status status="PASS" start="2025-02-11T10:41:04.598800" elapsed="0.000238"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-11T10:38:55.880454" level="INFO">Clicking element '//a[@href='/view_cart']'.</msg>
+<msg time="2025-02-11T10:41:04.599731" level="INFO">Clicking element '//a[@href='/view_cart']'.</msg>
 <arg>${CART_BTN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-11T10:38:55.880259" elapsed="1.286896"/>
+<status status="PASS" start="2025-02-11T10:41:04.599421" elapsed="1.349889"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-11T10:38:59.169030" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-02-11T10:41:07.951453" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-11T10:38:57.167370" elapsed="2.001982"/>
+<status status="PASS" start="2025-02-11T10:41:05.949570" elapsed="2.002170"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-02-11T10:38:59.177538" level="INFO">Current page contains text 'Shopping Cart'.</msg>
+<msg time="2025-02-11T10:41:07.963372" level="INFO">Current page contains text 'Shopping Cart'.</msg>
 <arg>Shopping Cart</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-02-11T10:38:59.169697" elapsed="0.007972"/>
+<status status="PASS" start="2025-02-11T10:41:07.952134" elapsed="0.011424"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-02-11T10:38:59.177909" level="INFO">หน้าตะกร้าแสดงสำเร็จ</msg>
+<msg time="2025-02-11T10:41:07.963977" level="INFO">หน้าตะกร้าแสดงสำเร็จ</msg>
 <arg>หน้าตะกร้าแสดงสำเร็จ</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-02-11T10:38:59.177804" elapsed="0.000166"/>
+<status status="PASS" start="2025-02-11T10:41:07.963833" elapsed="0.000224"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-11T10:38:59.178288" level="INFO">Clicking element '//a[@class='cart_quantity_delete']'.</msg>
+<msg time="2025-02-11T10:41:07.964486" level="INFO">Clicking element '//a[@class='cart_quantity_delete']'.</msg>
 <arg>${REMOVE_BTN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-11T10:38:59.178123" elapsed="0.026405"/>
+<status status="PASS" start="2025-02-11T10:41:07.964283" elapsed="0.031752"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-11T10:39:02.205678" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-02-11T10:41:10.997496" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-11T10:38:59.204803" elapsed="3.001065"/>
+<status status="PASS" start="2025-02-11T10:41:07.996337" elapsed="3.002194"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-02-11T10:39:02.206064" elapsed="0.089162"/>
+<status status="PASS" start="2025-02-11T10:41:10.999642" elapsed="0.096466"/>
 </kw>
-<status status="PASS" start="2025-02-11T10:38:48.257369" elapsed="14.038165"/>
+<status status="PASS" start="2025-02-11T10:40:57.366311" elapsed="13.730081"/>
 </test>
-<status status="PASS" start="2025-02-11T10:38:48.200953" elapsed="14.095069"/>
+<status status="PASS" start="2025-02-11T10:40:57.300616" elapsed="13.796229"/>
 </suite>
 <statistics>
 <total>

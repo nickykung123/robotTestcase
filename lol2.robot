@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 *** Variables ***
 ${URL}               http://automationexercise.com
 ${BROWSER}           Chrome
-${ADD_TO_CART_BTN}   (//a[contains(text(),'Add to cart')])[1]
+${ADD_TO_CART_BTN}   (//a[contains(text(),'Add to cart')])[7]
 ${CART_BTN}          //a[@href='/view_cart']
 ${REMOVE_BTN}        //a[@class='cart_quantity_delete']
  
@@ -14,10 +14,9 @@ Remove Product From Cart
  
     ${title}    Get Title
     Should Contain    ${title}    Automation Exercise
-    Log     หน้าแรกโหลดสำเร็จ
+    Log     โหลดสำเร็จ
     Execute JavaScript    var ads = document.querySelectorAll('iframe'); ads.forEach(ad => ad.remove());
     Sleep    2s
-    
     ${element}    Get WebElement    ${ADD_TO_CART_BTN}
     Execute JavaScript    arguments[0].dispatchEvent(new Event('click'));    ARGUMENTS    ${element}
     Sleep    2s
