@@ -14,18 +14,17 @@ Remove Product From Cart
  
     ${title}    Get Title
     Should Contain    ${title}    Automation Exercise
-    Log     โหลดสำเร็จ
-    Execute JavaScript    var ads = document.querySelectorAll('iframe'); ads.forEach(ad => ad.remove());
+    Log     สำเร็จ
     Sleep    2s
     ${element}    Get WebElement    ${ADD_TO_CART_BTN}
     Execute JavaScript    arguments[0].dispatchEvent(new Event('click'));    ARGUMENTS    ${element}
     Sleep    2s
     Run Keyword And Ignore Error    Click Button    //button[text()='Continue Shopping']
-    Log     เพิ่มสินค้าลงตะกร้าสำเร็จ
+    Log     สำเร็จ
     Click Element    ${CART_BTN}
     Sleep    2s
     Page Should Contain    Shopping Cart
-    Log     หน้าตะกร้าแสดงสำเร็จ
+    Log     สำเร็จ
     Click Element    ${REMOVE_BTN}
     Sleep    3s
  
