@@ -12,7 +12,6 @@ ${REMOVE_BTN}        //a[@class='cart_quantity_delete']
 Remove Product From Cart
     Open Browser    ${URL}    ${BROWSER}
  
-    # ดูหน้าโฮม
     ${title}    Get Title
     Should Contain    ${title}    Automation Exercise
     Log    ✅ หน้าแรกโหลดสำเร็จ
@@ -32,3 +31,4 @@ Remove Product From Cart
     Sleep    3s
  
     Close Browser
+    
