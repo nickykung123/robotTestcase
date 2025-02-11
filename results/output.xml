@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-11T09:28:59.310490" rpa="false" schemaversion="5">
+<suite id="s1" name="Dsada" source="D:\dsada">
+<suite id="s1-s1" name="Lol2" source="D:\dsada\lol2.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-02-11T09:28:59.503756" level="INFO">Opening browser 'firefox' to base url 'https://automationexercise.com/view_cart'.</msg>
+<arg>https://automationexercise.com/view_cart</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-11T09:28:59.503393" elapsed="7.672671"/>
+</kw>
+<test id="s1-s1-t1" name="Test Locked out Login" line="17">
+<kw name="Click View Product">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-11T09:29:07.181339" level="INFO">Clicking button '//*[@id="cartModal"]/div/div/div[2]/p[2]/a/u"'.</msg>
+<msg time="2025-02-11T09:29:07.232459" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-11T09:29:07.232915" level="FAIL">InvalidSelectorException: Message: Given xpath expression "//*[@id="cartModal"]/div/div/div[2]/p[2]/a/u"" is invalid: SyntaxError: Document.evaluate: The expression is not a legal expression; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+InvalidSelectorError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:443:5
+find_@chrome://remote/content/shared/DOM.sys.mjs:170:11
+</msg>
+<arg>//*[@id="cartModal"]/div/div/div[2]/p[2]/a/u"</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2025-02-11T09:29:07.179794" elapsed="0.057893">InvalidSelectorException: Message: Given xpath expression "//*[@id="cartModal"]/div/div/div[2]/p[2]/a/u"" is invalid: SyntaxError: Document.evaluate: The expression is not a legal expression; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+InvalidSelectorError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:443:5
+find_@chrome://remote/content/shared/DOM.sys.mjs:170:11
+</status>
+</kw>
+<status status="FAIL" start="2025-02-11T09:29:07.178716" elapsed="0.059554">InvalidSelectorException: Message: Given xpath expression "//*[@id="cartModal"]/div/div/div[2]/p[2]/a/u"" is invalid: SyntaxError: Document.evaluate: The expression is not a legal expression; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+InvalidSelectorError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:443:5
+find_@chrome://remote/content/shared/DOM.sys.mjs:170:11
+</status>
+</kw>
+<kw name="Click Add to Cart">
+<status status="NOT RUN" start="2025-02-11T09:29:07.238894" elapsed="0.000297"/>
+</kw>
+<kw name="Click View Cart">
+<status status="NOT RUN" start="2025-02-11T09:29:07.239517" elapsed="0.000108"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Blue Top</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-02-11T09:29:07.239849" elapsed="0.000124"/>
+</kw>
+<status status="FAIL" start="2025-02-11T09:29:07.176873" elapsed="0.063466">InvalidSelectorException: Message: Given xpath expression "//*[@id="cartModal"]/div/div/div[2]/p[2]/a/u"" is invalid: SyntaxError: Document.evaluate: The expression is not a legal expression; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+InvalidSelectorError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:443:5
+find_@chrome://remote/content/shared/DOM.sys.mjs:170:11
+</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-11T09:29:07.243924" elapsed="2.809309"/>
+</kw>
+<status status="FAIL" start="2025-02-11T09:28:59.330877" elapsed="10.722744"/>
+</suite>
+<status status="FAIL" start="2025-02-11T09:28:59.313612" elapsed="10.744219"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Dsada" id="s1" pass="0" fail="1" skip="0">Dsada</stat>
+<stat name="Lol2" id="s1-s1" pass="0" fail="1" skip="0">Dsada.Lol2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
