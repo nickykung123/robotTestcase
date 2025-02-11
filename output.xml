@@ -1,75 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-11T09:28:58.325778" rpa="false" schemaversion="5">
-<suite id="s1" name="Lol2" source="d:\dsada\lol2.robot">
-<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2025-02-11T09:28:58.575924" level="INFO">Opening browser 'firefox' to base url 'https://automationexercise.com/view_cart'.</msg>
-<arg>https://automationexercise.com/view_cart</arg>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on darwin)" generated="2025-02-11T10:38:48.199196" rpa="false" schemaversion="5">
+<suite id="s1" name="Lol2" source="/Users/nickykung123/Downloads/robotTestcase/lol2.robot">
+<test id="s1-t1" name="Remove Product From Cart" line="12">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:38:48.258045" level="INFO">Opening browser 'Chrome' to base url 'http://automationexercise.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-11T09:28:58.575484" elapsed="8.120833"/>
+<status status="PASS" start="2025-02-11T10:38:48.257864" elapsed="3.496875"/>
 </kw>
-<test id="s1-t1" name="Test Locked out Login" line="17">
-<kw name="Click View Product">
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:38:51.774657" level="INFO">${title} = Automation Exercise</msg>
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-02-11T10:38:51.755873" elapsed="0.018940"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${title}</arg>
+<arg>Automation Exercise</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-02-11T10:38:51.775077" elapsed="0.000200"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-11T10:38:51.775499" level="INFO">หน้าแรกโหลดสำเร็จ</msg>
+<arg>หน้าแรกโหลดสำเร็จ</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-11T10:38:51.775396" elapsed="0.000169"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:38:51.776026" level="INFO">Executing JavaScript:
+var ads = document.querySelectorAll('iframe'); ads.forEach(ad =&gt; ad.remove());
+Without any arguments.</msg>
+<arg>var ads = document.querySelectorAll('iframe'); ads.forEach(ad =&gt; ad.remove());</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-02-11T10:38:51.775719" elapsed="0.004205"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-11T10:38:53.781200" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-11T10:38:51.780064" elapsed="2.002047"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:38:53.804275" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="da1950f182424ca083cda0f3a05b313e", element="f.D3EB3A07FC3E4B04A19C012C443D14EA.d.28A1A5373EF8BEB47E7A29EF01929B4B.e.30")&gt;</msg>
+<var>${element}</var>
+<arg>${ADD_TO_CART_BTN}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-02-11T10:38:53.783008" elapsed="0.021456"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:38:53.805224" level="INFO">Executing JavaScript:
+arguments[0].dispatchEvent(new Event('click'));
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="da1950f182424ca083cda0f3a05b313e", element="f.D3EB3A07FC3E4B04A19C012C443D14EA.d.28A1A5373EF8BEB47E7A29EF01929B4B.e.30")&gt;'</msg>
+<arg>arguments[0].dispatchEvent(new Event('click'));</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-02-11T10:38:53.804716" elapsed="0.008465"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-11T10:38:55.816161" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-11T10:38:53.813525" elapsed="2.003487"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-11T09:29:06.699024" level="INFO">Clicking button '//*[@id="cartModal"]/div/div/div[2]/p[2]/a/u"'.</msg>
-<msg time="2025-02-11T09:29:06.744018" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-02-11T09:29:06.744392" level="FAIL">InvalidSelectorException: Message: Given xpath expression "//*[@id="cartModal"]/div/div/div[2]/p[2]/a/u"" is invalid: SyntaxError: Document.evaluate: The expression is not a legal expression; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
-Stacktrace:
-RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
-InvalidSelectorError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:443:5
-find_@chrome://remote/content/shared/DOM.sys.mjs:170:11
-</msg>
-<arg>//*[@id="cartModal"]/div/div/div[2]/p[2]/a/u"</arg>
+<msg time="2025-02-11T10:38:55.819868" level="INFO">Clicking button '//button[text()='Continue Shopping']'.</msg>
+<arg>//button[text()='Continue Shopping']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="FAIL" start="2025-02-11T09:29:06.698534" elapsed="0.078598">InvalidSelectorException: Message: Given xpath expression "//*[@id="cartModal"]/div/div/div[2]/p[2]/a/u"" is invalid: SyntaxError: Document.evaluate: The expression is not a legal expression; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
-Stacktrace:
-RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
-InvalidSelectorError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:443:5
-find_@chrome://remote/content/shared/DOM.sys.mjs:170:11
-</status>
+<status status="PASS" start="2025-02-11T10:38:55.819235" elapsed="0.059956"/>
 </kw>
-<status status="FAIL" start="2025-02-11T09:29:06.697943" elapsed="0.079571">InvalidSelectorException: Message: Given xpath expression "//*[@id="cartModal"]/div/div/div[2]/p[2]/a/u"" is invalid: SyntaxError: Document.evaluate: The expression is not a legal expression; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
-Stacktrace:
-RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
-InvalidSelectorError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:443:5
-find_@chrome://remote/content/shared/DOM.sys.mjs:170:11
-</status>
+<arg>Click Button</arg>
+<arg>//button[text()='Continue Shopping']</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-02-11T10:38:55.818282" elapsed="0.061020"/>
 </kw>
-<kw name="Click Add to Cart">
-<status status="NOT RUN" start="2025-02-11T09:29:06.778792" elapsed="0.000160"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-11T10:38:55.879669" level="INFO">เพิ่มสินค้าลงตะกร้าสำเร็จ</msg>
+<arg>เพิ่มสินค้าลงตะกร้าสำเร็จ</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-11T10:38:55.879516" elapsed="0.000286"/>
 </kw>
-<kw name="Click View Cart">
-<status status="NOT RUN" start="2025-02-11T09:29:06.779620" elapsed="0.000161"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:38:55.880454" level="INFO">Clicking element '//a[@href='/view_cart']'.</msg>
+<arg>${CART_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T10:38:55.880259" elapsed="1.286896"/>
 </kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Blue Top</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="NOT RUN" start="2025-02-11T09:29:06.780513" elapsed="0.000190"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-11T10:38:59.169030" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-11T10:38:57.167370" elapsed="2.001982"/>
 </kw>
-<status status="FAIL" start="2025-02-11T09:29:06.696734" elapsed="0.084695">InvalidSelectorException: Message: Given xpath expression "//*[@id="cartModal"]/div/div/div[2]/p[2]/a/u"" is invalid: SyntaxError: Document.evaluate: The expression is not a legal expression; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
-Stacktrace:
-RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
-InvalidSelectorError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:443:5
-find_@chrome://remote/content/shared/DOM.sys.mjs:170:11
-</status>
-</test>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:38:59.177538" level="INFO">Current page contains text 'Shopping Cart'.</msg>
+<arg>Shopping Cart</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-02-11T10:38:59.169697" elapsed="0.007972"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-11T10:38:59.177909" level="INFO">หน้าตะกร้าแสดงสำเร็จ</msg>
+<arg>หน้าตะกร้าแสดงสำเร็จ</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-11T10:38:59.177804" elapsed="0.000166"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:38:59.178288" level="INFO">Clicking element '//a[@class='cart_quantity_delete']'.</msg>
+<arg>${REMOVE_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T10:38:59.178123" elapsed="0.026405"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-11T10:39:02.205678" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-11T10:38:59.204803" elapsed="3.001065"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-02-11T09:29:06.784142" elapsed="2.781405"/>
+<status status="PASS" start="2025-02-11T10:39:02.206064" elapsed="0.089162"/>
 </kw>
-<status status="FAIL" start="2025-02-11T09:28:58.329069" elapsed="11.236961"/>
+<status status="PASS" start="2025-02-11T10:38:48.257369" elapsed="14.038165"/>
+</test>
+<status status="PASS" start="2025-02-11T10:38:48.200953" elapsed="14.095069"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Lol2" id="s1" pass="0" fail="1" skip="0">Lol2</stat>
+<stat name="Lol2" id="s1" pass="1" fail="0" skip="0">Lol2</stat>
 </suite>
 </statistics>
 <errors>
