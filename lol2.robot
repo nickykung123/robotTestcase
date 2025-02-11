@@ -1,21 +1,34 @@
 *** Settings ***
 Library    SeleniumLibrary
-Suite Setup    Open Browser    https://automationexercise.com/view_cart
-Suite Teardown    Close Browser
+ 
 *** Variables ***
-
-*** Keywords ***
-Click View Product 
-    Click Button    //*[@id="cartModal"]/div/div/div[2]/p[2]/a/u"
-Click Add to Cart
-    Click Button    //*[@id="/html/body/section/div/div/div[2]/div[2]/div[2]/div/span/button"]
-
-Click View Cart 
-    Click Button    //*[@id="cartModal"]/div/div/div[2]/p[2]/a/u"
-
+${URL}               http://automationexercise.com
+${BROWSER}           Chrome
+${ADD_TO_CART_BTN}   (//a[contains(text(),'Add to cart')])[1]
+${CART_BTN}          //a[@href='/view_cart']
+${REMOVE_BTN}        //a[@class='cart_quantity_delete']
+ 
 *** Test Cases ***
-Test Locked out Login
-    Click View Product
-    Click Add to Cart
-    Click View Cart
-    Wait Until Page Contains    Blue Top
+Remove Product From Cart
+    Open Browser    ${URL}    ${BROWSER}
+ 
+    # ดูหน้าโฮม
+    ${title}    Get Title
+    Should Contain    ${title}    Automation Exercise
+    Log    ✅ หน้าแรกโหลดสำเร็จ
+    Execute JavaScript    var ads = document.querySelectorAll('iframe'); ads.forEach(ad => ad.remove());
+    Sleep    2s
+    
+    ${element}    Get WebElement    ${ADD_TO_CART_BTN}
+    Execute JavaScript    arguments[0].dispatchEvent(new Event('click'));    ARGUMENTS    ${element}
+    Sleep    2s
+    Run Keyword And Ignore Error    Click Button    //button[text()='Continue Shopping']
+    Log    ✅ เพิ่มสินค้าลงตะกร้าสำเร็จ
+    Click Element    ${CART_BTN}
+    Sleep    2s
+    Page Should Contain    Shopping Cart
+    Log    ✅ หน้าตะกร้าแสดงสำเร็จ
+    Click Element    ${REMOVE_BTN}
+    Sleep    3s
+ 
+    Close Browser
